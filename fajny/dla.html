@@ -1,0 +1,16 @@
+// Tworzenie kwadratu
+var kwadrat = document.createElement('div');
+kwadrat.style.width = '300px';
+kwadrat.style.height = '300px';
+kwadrat.style.border = '1px solid black';
+
+// Dodanie obsługi kliknięcia
+kwadrat.addEventListener('click', function() {
+  var tekst = prompt('Napisz coś:');
+  if (tekst === 'cześć') {
+    alert('Cześć!');
+  }
+});
+
+// Dodanie kwadratu do dokumentu
+document.body.appendChild(kwadrat);

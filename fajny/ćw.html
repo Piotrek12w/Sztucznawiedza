@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Weryfikacja</title>
+<style>
+.dialog{
+   position: fixed;
+   top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 300px;
+ padding: 20px;
+ border: 3px solid red;
+ text-align: center;
+    
+}
+
+.dialog button{
+    margin: 10px;
+    padding: 5px 10px;
+   
+    
+}
+
+</style>
+</head>
+<body>
+<div class="dialog">
+<h1>Witaj na stronie</h1>
+<p>Kliknij "Tak,aby się zweryfkiować"</p>
+<button onclick="PrzejdzDostrony()">Tak</button>
+<button onclick="zablokujstrone()">Nie</button>
+</div>
+<script>
+
+function PrzejdzDostrony() {
+window.location.href="Strona głowna.html";
+}
+
+function zablokujstrone() {
+    document.body.innerHTML="<h1>Kliknołes nie,więc nie możesz wejć na strone.</h1>";
+}
+
+  
+
+</script>
+
+
+
+
+</div>
+</body>
+
+</html>

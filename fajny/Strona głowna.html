@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Odliczanie do końca wakacji</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            font-size: 24px;
+            margin-top: 200px;
+            border: 2px solid red;
+            
+            
+        }
+    </style>
+</head>
+<body>
+    <h1>Do końca wakacji pozostało:</h1>
+    <h2 id="countdown"></h2>
+
+    <script>
+        // Data końca wakacji (wprowadź własną datę)
+        var endDate = new Date("2023-09-01");
+
+        function countdown() {
+            var now = new Date();
+            var difference = endDate - now;
+
+            if (difference <= 0) {
+                document.getElementById("countdown").innerHTML = "Wakacje się skończyły!";
+            } else {
+                var days = Math.floor(difference / (1000 * 60 * 60 * 24));
+                var hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                var minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+                var seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+                document.getElementById("countdown").innerHTML = days + " dni, " + hours + " godzin, " + minutes + " minut, " + seconds + " sekund";
+            }
+        }
+
+        // Wywołaj funkcję countdown co sekundę
+        setInterval(countdown, 1000);
+    </script>
+</body>
+</html>
+
+
+
